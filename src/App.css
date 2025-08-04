@@ -1,0 +1,119 @@
+.app-container {
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.top-left-image {
+  position: absolute;
+  top: 10px; /* Adjust top position as needed */
+  left: 10px; /* Adjust left position as needed */
+  width: 150px; /* Increased width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.top-right-image {
+  position: absolute;
+  top: 10px; /* Adjust top position as needed */
+  right: 10px; /* Adjust right position as needed */
+  width: 170px; /* Increased width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.marquee-container {
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.scrolling-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  background-color: peachpuff;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 120%; /* Increased form width */
+  max-width: 1000px; /* Increased maximum form width */
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-container pre {
+  font-size: 16px;
+}
+
+.app-footer {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* MovieList adjustments */
+.d-flex.flex-column.justify-content-center.align-items-start.p-5 {
+  width: 95%; /* Increased width for movie list container */
+  max-width: none;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 100%;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .top-left-image {
+    width: 120px;
+    top: 5px;
+    left: 5px;
+  }
+  .top-right-image {
+    width: 160px;
+    top: 5px;
+    right: 5px;
+  }
+  .app-marquee {
+    font-size: 18px;
+  }
+  .form-container {
+    width: 98%;
+    padding: 20px;
+  }
+  .d-flex.flex-column.justify-content-center.align-items-start.p-5 {
+    width: 98%;
+    padding: 10px;
+  }
+}
